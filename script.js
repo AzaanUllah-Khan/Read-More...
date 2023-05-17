@@ -7,9 +7,11 @@ function change() {
     if (hide.style.display == 'none') {
         show.innerHTML = inner
         hide.style.display = 'inline';
+        document.getElementById('ml').innerHTML = "Less"
     }
     else {
         show.innerHTML = inner + '....';
         hide.style.display = 'none';
+        document.getElementById('ml').innerHTML = "More"
     }
 }
