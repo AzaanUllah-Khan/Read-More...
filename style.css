@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.msg {
+  position: relative;
+  background-color: #DCF8C6;
+  border-radius: 20px;
+  padding: 20px;
+  width: 380px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.msg::before {
+  content: "";
+  position: absolute;
+  top: -13px;
+  right: -1px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 20px 20px 0;
+  border-color: transparent #DCF8C6 transparent transparent;
+  transform: rotate(45deg);
+}
+
+.show {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+}
+
+#hidden {
+  display: none;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  background-color: #34B7F1;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  margin-top: 10px;
+  overflow: hidden;
+  position: relative;
+}
+button::before{
+  content: '';
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 162, 255, 0.09);
+  transform: skew(-35deg);
+  position: absolute;
+  left: -105%;
+  top: 0;
+  transition: all 0.5s ease;
+}
+button:hover::before{
+  left: 0;
+  transform: skew(0deg);
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: bolder;
+  color: #0082ba;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-top: 0;
+}
+.sender{
+  display: flex;
+  margin-bottom: 15px;
+  align-items: center;
+  gap: 5px;
+  border-bottom: 1px solid rgba(65, 107, 11, 0.1);
+  padding-bottom: 10px;
+}
+img{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+a{
+  font-weight: bolder;
+  font-size: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+}
